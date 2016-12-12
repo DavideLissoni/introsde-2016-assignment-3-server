@@ -33,6 +33,7 @@ The program has the following structure:
 
 * **introsde.document.endpoint**:
   * *PeoplePublisher.java*: service endpoint.
+  
 * **introsde.document.model**:this package contains the entity classes(java EE component that represents the persistent data maintained in the database lifecoach.sqlite used in this project). The classes contain also methods used to run database operations.
   * *HealthMeasureHistory.java*: refers to the database table HealthMeasureHistory;
   * *HealthProfile.java*: refers to the database table HealthProfile;
@@ -42,6 +43,7 @@ The program has the following structure:
 * **introsde.document.ws**: this package contains the classes responsible for the service methods available
   * *People.java*: interface for the wsdl service;
   * *PeopleImpl.java*: contains the implementation of the interface methods.
+  
 * **Other files presents in the repository**:
   * *build.xml*: ANT build script used to compile and execute the project through ANT;
   * *ivy.xml*: contains the project dependencies;
@@ -56,7 +58,7 @@ In order to create the war clone the git repository and then make sure to be loc
 ```sh
 ant create.war
 ```
-This project has been deployng on heroku using the following buildpack: https://github.com/IntroSDE/heroku-buildpack-ant.git
+This project has been deployed on heroku using the following buildpack: https://github.com/IntroSDE/heroku-buildpack-ant.git.
 This buildpack is used to run ant commands during the deployng in order to initialize the project,create the war and finally start the endpoint class PeoplePublisher through the ant command 'ant start' present in the Procfile.
 
 In order to deploy the project from this repository on Heroku digit the following sequence of commands:
